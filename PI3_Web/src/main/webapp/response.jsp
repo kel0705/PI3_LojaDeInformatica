@@ -1,6 +1,6 @@
 <%-- 
-    Document   : response
-    Created on : 01/05/2017, 19:45:33
+    Document   : produto2
+    Created on : 03/05/2017, 22:31:48
     Author     : Kelly
 --%>
 
@@ -12,6 +12,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <jsp:useBean id="mybean" scope="session" class="teste.TesteJSP" />
+        <jsp:setProperty name="mybean" property="name" />
+        <h1>Hello, <jsp:getProperty name="mybean" property="name" />!</h1>
     </body>
 </html>

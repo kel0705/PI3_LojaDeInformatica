@@ -1,6 +1,6 @@
 <%-- 
     Document   : index
-    Created on : 01/05/2017, 19:20:42
+    Created on : 03/05/2017, 22:08:34
     Author     : Kelly
 --%>
 
@@ -13,11 +13,10 @@
     </head>
     <body>
         <h1>Entry Form</h1>
-        <form name="DADOS DO PRODUTO" action="produto2.jsp">
+        <form name="Form de Entrada de Nome" action="response.jsp">
             Indique seu nome:
-            <input type="text" name="Descrição" value="" />
-
-            <input type="submit" value="Cadastrar" />
+            <input type="text" name="name" />
+            <input type="submit" value="OK" />
         </form>
     </body>
 </html>
