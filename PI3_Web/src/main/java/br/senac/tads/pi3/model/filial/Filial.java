@@ -10,21 +10,46 @@ package br.senac.tads.pi3.model.filial;
  * @author Vitor
  */
 public class Filial {
-    public String fantasia;
     public int id;
+    public String nomeFantasia;
+    public int cnpj = 0;
+    public String nomeFilial;
     
-    public Filial(int id, String f){
+    
+    public Filial(int id, String nomeFantasia, int cnpj, String nomeFilial){
         this.id = id;
-        this.fantasia = f;
+        this.nomeFantasia = nomeFantasia;
+        this.cnpj = cnpj;
+        this.nomeFilial = nomeFilial;
+    }
+
+    public Filial(int i, String pwi) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Filial() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     public int getId() {
         return this.id;
     }
-    public String getFantasia() {
-        return this.fantasia;
+    public String getNomeFantasia() {
+        return this.nomeFantasia;
     }
-    public void setFantasia(String f) {
-        this.fantasia = f;
+    public void setNomeFantasia(String nomeFantasia) {
+        this.nomeFantasia = nomeFantasia;
+    }
+    public int getCnpj(){
+        return this.cnpj;
+    }
+    public void setCnpj(int cnpj){
+        this.cnpj = cnpj;
+    }
+    public String getNomeFilial(){
+        return this.nomeFilial;
+    }
+    public void setNomeFilial(String nomeFilial){
+        this.nomeFilial = nomeFilial;
     }
 }

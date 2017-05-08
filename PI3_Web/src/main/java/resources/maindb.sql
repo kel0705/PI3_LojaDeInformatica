@@ -62,3 +62,12 @@ CREATE TABLE Venda_Produto (
     
 );
 */
+
+
+
+CREATE TABLE Filial (
+    ID_FILIAL INTEGER(10),
+    CNPJ INTEGER(14),
+    NOME VARCHAR(60),
+    NOME_FANTASIA VARCHAR(35),
+);

@@ -26,12 +26,10 @@ public class ServicoProduto {
             throw new ProdutoException("É necessário informar um nome para produto");
         }   
      
-        if (produto.getVlProd()== null
-                || produto.getVlProd()< 0) {
+        if (produto.getVlProd()== null || produto.getVlProd()< 0) {
             throw new ProdutoException("É necessário informar um valor para o produto");
         }
-        if  (produto.getQtdProd()== null
-              || produto.getVlProd()< 0) {
+        if  (produto.getQtdProd()== null || produto.getVlProd()< 0) {
             throw new ProdutoException("É necessário informar um quantidade de produto válido");
         }
 
