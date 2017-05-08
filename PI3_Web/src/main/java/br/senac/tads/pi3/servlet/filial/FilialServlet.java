@@ -52,13 +52,14 @@ public class EmpresaServerlet extends HttpServlet{
             out.print("</head>");
             out.print("<body>");
             for(Filial f: lista){
-                out.print("<h1>Nome = " + f.getFantasia() + "</h1>");
+                out.print("<h1>Nome = " + f.getNomeFantasia() + "</h1>");
             }
             out.print("</body>");
             out.print("</html>");
             out.flush();
         }catch (IOException ex){
             //Logger.getLogger(AgendaServlet.class.getName()).log(level.)
+            ex.printStackTrace();
         }
     }
 }
