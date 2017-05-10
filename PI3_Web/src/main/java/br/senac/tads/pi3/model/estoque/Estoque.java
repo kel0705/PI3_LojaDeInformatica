@@ -3,18 +3,22 @@ package br.senac.tads.pi3.model.estoque;
 public class Estoque {
     public int id;
     public String nome;
-    public int fkEmpresa;
+    public int idEmpresa;
     
     public Estoque(int i, String e, int emp){
         this.id = i;
         this.nome = e;
-        this.fkEmpresa = emp;       
+        this.idEmpresa = emp;       
+    }
+
+    public Estoque(){
+        
     }
     
     public void setId(int id){
         this.id = id;
     }
-    public int getid(){
+    public int getId(){
         return this.id;
     }
     public void setNome(String n){
@@ -23,10 +27,10 @@ public class Estoque {
     public String getNome(){
         return this.nome;
     }
-    public int getfkEmpresa(){
-        return this.fkEmpresa;
+    public int getFkEmpresa(){
+        return this.idEmpresa;
     }
-    public void setfkEmpresa(int fk){
-        this.fkEmpresa = fk;
+    public void setidEmpresa(int fk){
+        this.idEmpresa = fk;
     }
 }
