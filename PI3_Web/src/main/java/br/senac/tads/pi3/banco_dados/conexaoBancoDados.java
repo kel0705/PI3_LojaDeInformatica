@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.senac.pi3.banco_dados;
+package br.senac.tads.pi3.banco_dados;
 
 
 import java.sql.Connection;

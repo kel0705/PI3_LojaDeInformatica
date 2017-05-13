@@ -5,7 +5,7 @@
  */
 package br.senac.tads.pi3.servlet.produto;
 
-import br.senac.pi3.banco_dados.conexaoBancoDados;
+import br.senac.tads.pi3.banco_dados.conexaoBancoDados;
 import br.senac.tads.pi3.db.dao.DaoProduto;
 import br.senac.tads.pi3.model.produtos.Produtos;
 import java.io.IOException;
