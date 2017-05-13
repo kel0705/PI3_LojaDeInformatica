@@ -37,9 +37,9 @@
                         
                         out.println("<td>" + rsRegistros.getString("categ_prod")+"</td>");
                         out.println("<td>" + rsRegistros.getString("desc_prod")+"</td>");
-                        out.println("<td><a href='editar_produto.jsp?Codigo=" + rsRegistros.getInt("id_produto")
+                        out.println("<td><a href='editar_produto.jsp?Codigo=" + rsRegistros.getString("id_produto")
                         + "'>Editar</a></td>");
-                        out.println("<td><a href='excluir_produto.jsp?Codigo=" + rsRegistros.getInt("id_produto")
+                        out.println("<td><a href='excluir_produto.jsp?Codigo=" + rsRegistros.getString("id_produto")
                         + "'>Excluir</a></td>");
                         out.print("</tr>");
                     }

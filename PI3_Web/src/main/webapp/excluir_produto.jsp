@@ -21,7 +21,7 @@
             
             Produtos Produto = new Produtos();
             
-            int idProduto = Integer.parseInt(request.getParameter("codigo_produto"));
+            int idProduto = Integer.parseInt(request.getParameter("Codigo"));
             blnConectado = false;
             
             if (conexao.abrirConexao()){
@@ -30,11 +30,11 @@
                 rsRegistro = daoProduto.obter(idProduto);
                 
                 Produto.setIdProduto(idProduto);
-                Produto.setCategoria(rsRegistro.getString("categoria"));
-                Produto.setDescProduto(rsRegistro.getString("descricao"));
-                Produto.setQtdEstoque(rsRegistro.getInt("qtdeEstoque"));
-                Produto.setQtdEstoque(rsRegistro.getInt("qtdeUnidade"));
-                Produto.setQtdEstoque(rsRegistro.getInt("vlProduto"));
+                Produto.setCategoria(rsRegistro.getString("categ_prod"));
+                Produto.setDescProduto(rsRegistro.getString("desc_prod"));
+                Produto.setQtdEstoque(rsRegistro.getInt("qtd_Estoque"));
+                Produto.setQtdEstoque(rsRegistro.getInt("qtd_Unidade"));
+                Produto.setQtdEstoque(rsRegistro.getInt("valor_prod"));
                 
                 conexao.fecharConexao();
                 
@@ -49,10 +49,9 @@
             <p class="TituloPagina">Cadastro de Produtos - Excluir</p>
 
             <form name="formExcluirProduto" action="excluirProduto" method="POST">
-                <p> Nome do Produto: <%=Produto.getIdProduto()%>></p>
                 <br>
+                <p> Descrição   : <%=Produto.getDescProduto()%></p>
                 <p>Categoria: <%=Produto.getCategoria()%></p>
-                <p>Descrição: <%=Produto.getDescProduto()%></p>
                 <p>Qtde. Estoque: <%=Produto.getQtdEstoque()%></p>
                 <p>Qtde. Unidade: <%=Produto.getQtdUnidade()%></p>
                 <p>Valor: <%=Produto.getVlProduto()%></p>
@@ -60,8 +59,9 @@
                     <input type="hidden" name="codigo_produto" value="<%=idProduto%>" />
                     <br>
                 
-                <p><input type="submit" value="Excluir" name="btnExcluir" />
+                <p>
                     <span class="LinkVoltar"><a href="javascript:history.back()">[Voltar]</a></span>
+                    <input type="submit" value="Excluir" name="btnExcluir" />
                 </p>
                 
             </form>

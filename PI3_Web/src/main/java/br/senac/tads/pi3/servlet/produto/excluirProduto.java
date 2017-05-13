@@ -57,7 +57,7 @@ public class excluirProduto extends HttpServlet {
                     
                     out.println("<h2>Produto excluído com sucesso!</h2>");
                     out.println("<br><br><br><br>");
-                    out.println("a href='menu_produtos.html'>Fechar</a>");
+                    out.println("<a href='menu_produtos.html'>Fechar</a>");
                 } 
                 else {
                     out.println("<h2>Não foi possível excluir o registro do usuário!</h2>");
