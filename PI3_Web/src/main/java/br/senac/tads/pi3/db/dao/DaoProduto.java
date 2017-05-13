@@ -6,13 +6,11 @@ package br.senac.tads.pi3.db.dao;
  */
 
 import br.senac.tads.pi3.model.produtos.Produtos;
+import static java.lang.System.out;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
 
 //Data Access Object de produto. Realiza operações de BD com o produto. 
 public class DaoProduto {
@@ -30,11 +28,10 @@ public class DaoProduto {
         //Monta a string de inserção de um produto no BD,
         //utilizando os dados do produtos passados como parâmetro
         try {
-            String sql = "INSERT INTO produto (categ_prod, desc_prod, qtd_estoque, "
+            String sql = "INSERT INTO produto (categ_prod, desc_prod, "
                     + "qtd_unidade, valor_prod, enabled) VALUES ("
                     + "'" + produto.getCategoria() + "', "
                     + "'" + produto.getDescProduto() + "', "
-                    + produto.getQtdEstoque() + ", "
                     + produto.getQtdUnidade() + ", "
                     + produto.getVlProduto() + ", "
                     + "true"
@@ -57,11 +54,10 @@ public class DaoProduto {
         //Monta a string de atualização do produto no BD, utilizando
         //os dados e o ID do produto passados como parâmetro
         try {
-            String sql = "UPDATE produto SET categ_prod = '" + produto.getCategoria() + "', "
+            String sql = "UPDATE PRODUTO SET categ_prod = '" + produto.getCategoria() + "', "
                     + "desc_prod = '" + produto.getDescProduto() + "', "
-                    + "qtd_estoque = " + produto.getQtdEstoque() + ", "
                     + "qtd_unidade = " + produto.getQtdUnidade() + ", "
-                    + "valor_prod = " + produto.getVlProduto() + ", "
+                    + "valor_prod = " + produto.getVlProduto() + " "
                     + " WHERE id_produto = " + produto.getIdProduto();
 
             //Executa o comando SQL montado            

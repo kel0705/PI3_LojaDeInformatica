@@ -55,15 +55,13 @@ public class atualizarProduto extends HttpServlet {
             
             if (conexao.abrirConexao()) {
 
-                daoProduto.configurarConexao(conexao.obterConexao());
-                out.println("<h2>Conexão Ok2!</h2>");
-
-                if (daoProduto.alterar(produto)) {
+                daoProduto.configurarConexao(conexao.obterConexao());                
+                if(daoProduto.alterar(produto)){
                     out.println("<h2>Produto alterado com sucesso!</h2>");
                     out.println("<br><br><br><br>");
                     out.println("<a href='menu_produtos.html'>Voltar</a>");
-                } else {
-                    out.println("<h2>Não foi possível cadastrar o produto!</h2>");
+                }else{
+                    out.println("<h2>Não foi possível alterar produto.</h2>");
                 }
                 conexao.fecharConexao();
             } else {

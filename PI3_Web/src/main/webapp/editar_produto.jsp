@@ -30,8 +30,7 @@
 
                 Produto.setCategoria(rsRegistros.getString("categ_prod"));
                 Produto.setDescProduto(rsRegistros.getString("desc_prod"));
-                Produto.setQtdEstoque(Integer.parseInt(rsRegistros.getString("qtd_Estoque")));
-                Produto.setQtdEstoque(Integer.parseInt(rsRegistros.getString("qtd_Unidade")));
+                Produto.setQtdUnidade(Integer.parseInt(rsRegistros.getString("qtd_Unidade")));
                 Produto.setVlProduto(Double.parseDouble(rsRegistros.getString("valor_prod")));
 
                 blnConectado = true;
@@ -57,7 +56,6 @@
             
             <p>Produto: <input type="text" name="descricao" value="<%=Produto.getDescProduto()%>" size="50" /></p>
 
-            <p>Quant. Estoque: <input type="text" name="qtdeEstoque" value="<%=Produto.getQtdEstoque()%>" size="3" /> <br>  
             <p>Quant. Unidade: <input type="text" name="qtdeUnidade" value="<%=Produto.getQtdUnidade()%>" size="3" /> <br>    
             <p>Valor: <input type="text" name="vlProduto" value="<%=Produto.getVlProduto()%>" size="10"/>
 

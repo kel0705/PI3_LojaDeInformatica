@@ -47,21 +47,6 @@ public class Produtos {
     public void setIdProduto(Integer id) {
         this.idProduto = id;
     }
-
-    /**
-     * @return the qtdEstoque
-     */
-    public Integer getQtdEstoque() {
-        return qtdEstoque;
-    }
-
-    /**
-     * @param qtdEstoque the qtdEstoque to set
-     */
-    public void setQtdEstoque(Integer qtdEstoque) {
-        this.qtdEstoque = qtdEstoque;
-    }
-
     /**
      * @return the qtdUnidade
      */

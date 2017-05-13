@@ -22,7 +22,6 @@
                 </select>
 
             <p>Produto: <input type="text" name="descricao" value="" size="50" />   
-            <p>Quant. Estoque: <input type="text" name="qtdeEstoque" value="" size="3" /> <br>  
             <p>Quant. Unidade: <input type="text" name="qtdeUnidade" value="" size="3" /> <br>    
             <p>Valor: <input type="text" name="vlProduto" value="" size="10"/>
                 <br><br><br>
