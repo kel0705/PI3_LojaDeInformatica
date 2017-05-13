@@ -66,8 +66,11 @@ CREATE TABLE Venda_Produto (
 
 
 CREATE TABLE Filial (
-    ID_FILIAL INTEGER(10),
+    Id_filial INTEGER(10),
     CNPJ INTEGER(14),
-    NOME VARCHAR(60),
-    NOME_FANTASIA VARCHAR(35),
+    nome VARCHAR(60),
+    nome_fantasia VARCHAR(35),
+    cidade VARCHAR (20),
+    estado VARCHAR (20),
+    telefone INTEGER (10),
 );
