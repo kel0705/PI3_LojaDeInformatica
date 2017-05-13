@@ -1,7 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.ResultSet"%>
-<jsp:useBean id="conexao" scope="page" class="br.senac.pi3.banco_dados.conexaoBancoDados" />
-<jsp:useBean id="daoProduto" scope="page" class="br.senac.pi3.db.dao.DaoProduto" />
+<jsp:useBean id="conexao" scope="page" class="br.senac.tads.pi3.banco_dados.conexaoBancoDados" />
+<jsp:useBean id="daoProduto" scope="page" class="br.senac.tads.pi3.db.dao.DaoProduto" />
 
 <!DOCTYPE html>
 <html>
