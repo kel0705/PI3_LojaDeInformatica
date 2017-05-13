@@ -44,8 +44,7 @@ public class inserirProduto extends HttpServlet {
             DaoProduto daoProduto = new DaoProduto();
             Produtos produto = new Produtos(request.getParameter("categoria"),
                     request.getParameter("descricao"),
-                    Integer.parseInt(request.getParameter("qtdeEstoque")),
-                    Integer.parseInt(request.getParameter("qtdeUnidade")),
+                    request.getParameter("unidade"),
                     Double.parseDouble(request.getParameter("vlProduto")));
 
             

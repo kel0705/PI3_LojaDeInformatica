@@ -22,7 +22,7 @@
                 </select>
 
             <p>Produto: <input type="text" name="descricao" value="" size="50" />   
-            <p>Quant. Unidade: <input type="text" name="qtdeUnidade" value="" size="3" /> <br>    
+            <p>Unidade: <input type="text" name="unidade" value="" size="20" /> <br>    
             <p>Valor: <input type="text" name="vlProduto" value="" size="10"/>
                 <br><br><br>
 

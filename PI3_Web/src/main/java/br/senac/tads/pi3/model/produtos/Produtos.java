@@ -12,23 +12,20 @@ package br.senac.tads.pi3.model.produtos;
 public class Produtos {
     
    private int idProduto; 
-   private int qtdEstoque;
-   private int qtdUnidade; 
+   private String unidade; 
    private Double vlProduto;
    private String descProduto;
    private String categoria;
       
    public Produtos (){
-       this.qtdEstoque = 0;
-       this.qtdUnidade = 0;
+       this.unidade = null;
        this.vlProduto = null;
        this.descProduto = "";
        this.categoria = "";
 }
    
-   public Produtos (String categoria, String descProduto, int qtdEstoque, int qtdUnidade, double vlProd){
-       this.qtdEstoque = qtdEstoque;
-       this.qtdUnidade = qtdUnidade;
+   public Produtos (String categoria, String descProduto, String unidade, double vlProd){
+       this.unidade = unidade;
        this.vlProduto = vlProd;
        this.descProduto = descProduto;
        this.categoria = categoria;
@@ -50,15 +47,15 @@ public class Produtos {
     /**
      * @return the qtdUnidade
      */
-    public Integer getQtdUnidade() {
-        return qtdUnidade;
+    public String getUnidade() {
+        return unidade;
     }
 
     /**
      * @param qtdUnidade the qtdUnidade to set
      */
-    public void setQtdUnidade(Integer qtdUnidade) {
-        this.qtdUnidade = qtdUnidade;
+    public void setUnidade(String unidade) {
+        this.unidade = unidade;
     }
 
     /**

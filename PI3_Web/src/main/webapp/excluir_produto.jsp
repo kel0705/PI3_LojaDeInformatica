@@ -32,9 +32,8 @@
                 Produto.setIdProduto(idProduto);
                 Produto.setCategoria(rsRegistro.getString("categ_prod"));
                 Produto.setDescProduto(rsRegistro.getString("desc_prod"));
-                Produto.setQtdEstoque(rsRegistro.getInt("qtd_Estoque"));
-                Produto.setQtdEstoque(rsRegistro.getInt("qtd_Unidade"));
-                Produto.setQtdEstoque(rsRegistro.getInt("valor_prod"));
+                Produto.setUnidade(rsRegistro.getString("unidade"));
+                Produto.setVlProduto(rsRegistro.getDouble("valor_prod"));
                 
                 conexao.fecharConexao();
                 
@@ -52,8 +51,7 @@
                 <br>
                 <p> Descrição   : <%=Produto.getDescProduto()%></p>
                 <p>Categoria: <%=Produto.getCategoria()%></p>
-                <p>Qtde. Estoque: <%=Produto.getQtdEstoque()%></p>
-                <p>Qtde. Unidade: <%=Produto.getQtdUnidade()%></p>
+                <p>Unidade: <%=Produto.getUnidade()%></p>
                 <p>Valor: <%=Produto.getVlProduto()%></p>
                 
                     <input type="hidden" name="codigo_produto" value="<%=idProduto%>" />

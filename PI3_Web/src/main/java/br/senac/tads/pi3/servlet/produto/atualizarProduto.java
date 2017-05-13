@@ -46,8 +46,7 @@ public class atualizarProduto extends HttpServlet {
 
             Produtos produto = new Produtos(request.getParameter("categoria"),
                     request.getParameter("descricao"),
-                    Integer.parseInt(request.getParameter("qtdeEstoque")),
-                    Integer.parseInt(request.getParameter("qtdeUnidade")),
+                    request.getParameter("unidade"),
                     Double.parseDouble(request.getParameter("vlProduto")));
 
             produto.setIdProduto(Integer.parseInt(request.getParameter("codigo_produto")));

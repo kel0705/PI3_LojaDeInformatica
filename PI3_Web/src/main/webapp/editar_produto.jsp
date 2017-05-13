@@ -30,7 +30,7 @@
 
                 Produto.setCategoria(rsRegistros.getString("categ_prod"));
                 Produto.setDescProduto(rsRegistros.getString("desc_prod"));
-                Produto.setQtdUnidade(Integer.parseInt(rsRegistros.getString("qtd_Unidade")));
+                Produto.setUnidade(rsRegistros.getString("unidade"));
                 Produto.setVlProduto(Double.parseDouble(rsRegistros.getString("valor_prod")));
 
                 blnConectado = true;
@@ -56,7 +56,7 @@
             
             <p>Produto: <input type="text" name="descricao" value="<%=Produto.getDescProduto()%>" size="50" /></p>
 
-            <p>Quant. Unidade: <input type="text" name="qtdeUnidade" value="<%=Produto.getQtdUnidade()%>" size="3" /> <br>    
+            <p>Unidade: <input type="text" name="unidade" value="<%=Produto.getUnidade()%>" size="3" /> <br>    
             <p>Valor: <input type="text" name="vlProduto" value="<%=Produto.getVlProduto()%>" size="10"/>
 
 

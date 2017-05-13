@@ -28,7 +28,7 @@
                     out.println("<h2><center>Lista de Produtos</center></h2>");
                     out.println("<br>");
                     out.println("<table>");
-                    out.println("<tr><th>Categoria</th><th>Produto</th><th></th>"
+                    out.println("<tr><th>Categoria</th><th>Produto</th><th>Valor</th><th></th>"
                             + "<th></th></tr>");
                     
                     while (rsRegistros.next()){
@@ -37,6 +37,7 @@
                         
                         out.println("<td>" + rsRegistros.getString("categ_prod")+"</td>");
                         out.println("<td>" + rsRegistros.getString("desc_prod")+"</td>");
+                        out.println("<td>" + rsRegistros.getString("valor_prod")+"</td>");
                         out.println("<td><a href='editar_produto.jsp?Codigo=" + rsRegistros.getString("id_produto")
                         + "'>Editar</a></td>");
                         out.println("<td><a href='excluir_produto.jsp?Codigo=" + rsRegistros.getString("id_produto")

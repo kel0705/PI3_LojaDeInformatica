@@ -2,7 +2,7 @@ package br.senac.tads.pi3.db.dao;
 
 /**
  *
- * @author Jonathan Souza
+ * @author Kelly
  */
 
 import br.senac.tads.pi3.model.produtos.Produtos;
@@ -29,10 +29,10 @@ public class DaoProduto {
         //utilizando os dados do produtos passados como parâmetro
         try {
             String sql = "INSERT INTO produto (categ_prod, desc_prod, "
-                    + "qtd_unidade, valor_prod, enabled) VALUES ("
+                    + "unidade, valor_prod, enabled) VALUES ("
                     + "'" + produto.getCategoria() + "', "
                     + "'" + produto.getDescProduto() + "', "
-                    + produto.getQtdUnidade() + ", "
+                    + "'" + produto.getUnidade() + "', "
                     + produto.getVlProduto() + ", "
                     + "true"
                     + ")";
@@ -56,7 +56,7 @@ public class DaoProduto {
         try {
             String sql = "UPDATE PRODUTO SET categ_prod = '" + produto.getCategoria() + "', "
                     + "desc_prod = '" + produto.getDescProduto() + "', "
-                    + "qtd_unidade = " + produto.getQtdUnidade() + ", "
+                    + "unidade = " + produto.getUnidade() + ", "
                     + "valor_prod = " + produto.getVlProduto() + " "
                     + " WHERE id_produto = " + produto.getIdProduto();
 
