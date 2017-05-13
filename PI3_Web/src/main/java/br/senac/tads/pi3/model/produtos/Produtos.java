@@ -11,51 +11,113 @@ package br.senac.tads.pi3.model.produtos;
  */
 public class Produtos {
     
-   private Integer id; 
-   private String produto;
+   private int idProduto; 
+   private int qtdEstoque;
+   private int qtdUnidade; 
+   private Double vlProduto;
+   private String descProduto;
    private String categoria;
-   private Integer qtdProd; 
-   private Double vlProd;
+      
+   public Produtos (){
+       this.qtdEstoque = 0;
+       this.qtdUnidade = 0;
+       this.vlProduto = null;
+       this.descProduto = "";
+       this.categoria = "";
+}
    
-   
-    public Integer getId() {
-        return id;
+   public Produtos (String categoria, String descProduto, int qtdEstoque, int qtdUnidade, double vlProd){
+       this.qtdEstoque = qtdEstoque;
+       this.qtdUnidade = qtdUnidade;
+       this.vlProduto = vlProd;
+       this.descProduto = descProduto;
+       this.categoria = categoria;
+   }
+
+    /**
+     * @return the id
+     */
+    public Integer getIdProduto() {
+        return idProduto;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    /**
+     * @param id the id to set
+     */
+    public void setIdProduto(Integer id) {
+        this.idProduto = id;
     }
 
-    public String getProduto() {
-        return produto;
+    /**
+     * @return the qtdEstoque
+     */
+    public Integer getQtdEstoque() {
+        return qtdEstoque;
     }
 
-    public void setProduto(String produto) {
-        this.produto = produto;
+    /**
+     * @param qtdEstoque the qtdEstoque to set
+     */
+    public void setQtdEstoque(Integer qtdEstoque) {
+        this.qtdEstoque = qtdEstoque;
     }
-    
+
+    /**
+     * @return the qtdUnidade
+     */
+    public Integer getQtdUnidade() {
+        return qtdUnidade;
+    }
+
+    /**
+     * @param qtdUnidade the qtdUnidade to set
+     */
+    public void setQtdUnidade(Integer qtdUnidade) {
+        this.qtdUnidade = qtdUnidade;
+    }
+
+    /**
+     * @return the vlProd
+     */
+    public Double getVlProduto() {
+        return vlProduto;
+    }
+
+    /**
+     * @param vlProd the vlProd to set
+     */
+    public void setVlProduto(Double vlProd) {
+        this.vlProduto = vlProd;
+    }
+
+    /**
+     * @return the descProduto
+     */
+    public String getDescProduto() {
+        return descProduto;
+    }
+
+    /**
+     * @param descProduto the descProduto to set
+     */
+    public void setDescProduto(String descProduto) {
+        this.descProduto = descProduto;
+    }
+
+    /**
+     * @return the categoria
+     */
     public String getCategoria() {
         return categoria;
     }
 
+    /**
+     * @param categoria the categoria to set
+     */
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
-    
-    public Integer getQtdProd() {
-        return qtdProd;
-    }
 
-    public void setQtdProd(Integer qtdProd) {
-        this.qtdProd = qtdProd;
-    }
-
-    public Double getVlProd() {
-        return vlProd;
-    }
-
-    public void setVlProd(Double vlProd) {
-        this.vlProd = vlProd;
-    }
+   
   
 }

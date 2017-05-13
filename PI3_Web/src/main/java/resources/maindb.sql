@@ -38,7 +38,8 @@ CREATE TABLE Produto (
     id_produto INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
     categ_prod VARCHAR (20),
     desc_prod VARCHAR(50),
-    qtd_prod INTEGER NOT NULL,
+    qtd_estoque INTEGER NOT NULL,
+    qtd_unidade INTEGER NOT NULL,
     valor_prod DOUBLE NOT NULL,
     enabled BOOLEAN
 );
